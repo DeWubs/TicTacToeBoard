@@ -15,14 +15,18 @@ class TicTacToeBoardTest : public ::testing::Test
 };
 
 TEST(TicTacToeBoardTest, switchFromX){
-  ASSERT_EQ(toggleTurn(), O);
+  TicTacToeBoard game1;
+  ASSERT_EQ(game1.toggleTurn(), O);
 }
 
 TEST(TicTacToeBoardTest, switchFromO){
+  TicTacToeBoard game2;
+  game2.toggleTurn();
   ASSERT_EQ(toggleTurn(), X);
 }
 
 TEST(TicTacToeBoardTest, switchSanity){
+  TicTacToeBoard game3;
   ASSERT_NE(toggleTurn(), Invalid);
 }
 /* EXAMPLE TEST FORMAT
