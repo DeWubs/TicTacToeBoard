@@ -21,13 +21,12 @@ TEST(TicTacToeBoardTest, switchFromX){
 
 TEST(TicTacToeBoardTest, switchFromO){
   TicTacToeBoard game2;
-  game2.toggleTurn();
-  ASSERT_EQ(toggleTurn(), X);
+  ASSERT_EQ(game2.toggleTurn(), X);
 }
 
 TEST(TicTacToeBoardTest, switchSanity){
   TicTacToeBoard game3;
-  ASSERT_NE(toggleTurn(), Invalid);
+  ASSERT_NE(game3.toggleTurn(), Invalid);
 }
 /* EXAMPLE TEST FORMAT
 TEST(TicTacToeBoardTest, unitTestName)
