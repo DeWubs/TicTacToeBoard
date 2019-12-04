@@ -19,15 +19,26 @@ TEST(TicTacToeBoardTest, switchFromX){
   ASSERT_EQ(game1.toggleTurn(), O);
 }
 
-// TEST(TicTacToeBoardTest, switchFromO){
-//   TicTacToeBoard game2;
-//   game2.toggleTurn();
-//   ASSERT_EQ(game2.toggleTurn(), X);
-// }
+TEST(TicTacToeBoardTest, switchFromO){
+  TicTacToeBoard game2;
+  game2.toggleTurn();
+  ASSERT_EQ(game2.toggleTurn(), X);
+}
 
 TEST(TicTacToeBoardTest, switchSanity){
   TicTacToeBoard game3;
   ASSERT_NE(game3.toggleTurn(), Invalid);
+}
+
+TEST(TicTacToeBoardTest, placeFirstPeice){
+	TicTacToeBoard game4;
+	ASSERT_EQ(game4.placePiece(2,2), X);
+}
+
+TEST(TicTacToeBoardTest, placeSecondPeice){
+	TicTacToeBoard game5;
+	game5.placePiece(2,2);
+	ASSERT_EQ(game5.placePiece(1,2), O);
 }
 /* EXAMPLE TEST FORMAT
 TEST(TicTacToeBoardTest, unitTestName)
