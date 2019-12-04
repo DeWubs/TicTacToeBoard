@@ -21,6 +21,7 @@ TEST(TicTacToeBoardTest, switchFromX){
 
 TEST(TicTacToeBoardTest, switchFromO){
   TicTacToeBoard game2;
+  game2.toggleTurn();
   ASSERT_EQ(game2.toggleTurn(), X);
 }
 
