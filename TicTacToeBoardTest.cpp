@@ -88,6 +88,106 @@ TEST(TicTacToeBoardTest, getoutofboundsRowandCol){
 	ASSERT_EQ(game14.getPiece(4,4), Invalid);
 }
 
+TEST(TicTacToeBoardTest, notOver){
+	TicTacToeBoard game15;
+	ASSERT_EQ(game15.getWinner(), Invalid);
+}
+
+TEST(TicTacToeBoardTest, catsGame){
+	TicTacToeBoard game16;
+	game16.placePiece(0,0);
+	game16.placePiece(0,1);
+	game16.placePiece(0,2);
+	game16.placePiece(1,0);
+	game16.placePiece(1,1);
+	game16.placePiece(1,2);
+	game16.placePiece(2,0);
+	game16.placePiece(2,1);
+	game16.placePiece(2,2);
+	ASSERT_EQ(game16.getWinner(), Blank);
+}
+
+TEST(TicTacToeBoardTest, topwinX){
+	TicTacToeBoard game17;
+	game17.placePiece(0,0);
+	game17.placePiece(1,0);
+	game17.placePiece(0,1);
+	game17.placePiece(2,0);
+	game17.placePiece(0,2);
+
+	ASSERT_EQ(game17.getWinner(), X);
+}
+
+TEST(TicTacToeBoardTest, middlewinX){
+	TicTacToeBoard game18;
+	game18.placePiece(1,0);
+	game18.placePiece(0,2);
+	game18.placePiece(1,1);
+	game18.placePiece(2,0);
+	game18.placePiece(1,2);
+	ASSERT_EQ(game18.getWinner(), X);
+}
+
+TEST(TicTacToeBoardTest, botWIn){
+	TicTacToeBoard game19;
+	game19.placePiece(2,0);
+	game19.placePiece(0,0);
+	game19.placePiece(2,1);
+	game19.placePiece(0,0);
+	game19.placePiece(2,2);
+	ASSERT_EQ(game19.getWinner(), X);
+}
+
+TEST(TicTacToeBoardTest, leftVert){
+	TicTacToeBoard game20;
+	game20.placePiece(0,0);
+	game20.placePiece(1,1);
+	game20.placePiece(1,0);
+	game20.placePiece(2,2);
+	game20.placePiece(2,0);
+	ASSERT_EQ(game20.getWinner(), X);
+}
+
+TEST(TicTacToeBoardTest, midVert){
+	TicTacToeBoard game21;
+	game21.placePiece(0,1);
+	game21.placePiece(0,0);
+	game21.placePiece(1,1);
+	game21.placePiece(0,0);
+	game21.placePiece(2,1);
+	ASSERT_EQ(game21.getWinner(), X);
+}
+
+TEST(TicTacToeBoardTest, rightVert){
+	TicTacToeBoard game22;
+	game22.placePiece(0,2);
+	game22.placePiece(0,0);
+	game22.placePiece(1,2);
+	game22.placePiece(0,0);
+	game22.placePiece(2,2);
+	ASSERT_EQ(game22.getWinner(), X);
+}
+
+TEST(TicTacToeBoardTest, topLeftDiag){
+	TicTacToeBoard game23;
+	game23.placePiece(0,0);
+	game23.placePiece(0,1);
+	game23.placePiece(1,1);
+	game23.placePiece(0,1);
+	game23.placePiece(2,2);
+	ASSERT_EQ(game23.getWinner(), X);
+}
+
+TEST(TicTacToeBoardTest, topRightDiag){
+	TicTacToeBoard game24;
+	game24.placePiece(0,2);
+	game24.placePiece(0,1);
+	game24.placePiece(1,1);
+	game24.placePiece(0,1);
+	game24.placePiece(2,0);
+	ASSERT_EQ(game24.getWinner(), X);
+}
+
 /* EXAMPLE TEST FORMAT
 TEST(TicTacToeBoardTest, unitTestName)
 {
