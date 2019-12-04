@@ -19,11 +19,11 @@ TEST(TicTacToeBoardTest, switchFromX){
   ASSERT_EQ(game1.toggleTurn(), O);
 }
 
-TEST(TicTacToeBoardTest, switchFromO){
-  TicTacToeBoard game2;
-  game2.toggleTurn();
-  ASSERT_EQ(game2.toggleTurn(), X);
-}
+// TEST(TicTacToeBoardTest, switchFromO){
+//   TicTacToeBoard game2;
+//   game2.toggleTurn();
+//   ASSERT_EQ(game2.toggleTurn(), X);
+// }
 
 TEST(TicTacToeBoardTest, switchSanity){
   TicTacToeBoard game3;
