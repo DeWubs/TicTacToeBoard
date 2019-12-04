@@ -44,7 +44,7 @@ TEST(TicTacToeBoardTest, placeSecondPeice){
 TEST(TicTacToeBoardTest, placePeiceOnTop){
 	TicTacToeBoard game6;
 	game6.placePiece(2,2);
-	ASSERT_EQ(game6.placePiece(2,2), Invalid);
+	ASSERT_EQ(game6.placePiece(2,2), X);
 }
 
 TEST(TicTacToeBoardTest, PlaceOutRow){
