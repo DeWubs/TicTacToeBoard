@@ -95,14 +95,14 @@ TEST(TicTacToeBoardTest, notOver){
 
 TEST(TicTacToeBoardTest, catsGame){
 	TicTacToeBoard game16;
-	game16.placePiece(0,0);
-	game16.placePiece(0,1);
-	game16.placePiece(0,2);
-	game16.placePiece(1,0);
-	game16.placePiece(1,1);
-	game16.placePiece(1,2);
-	game16.placePiece(2,0);
-	game16.placePiece(2,1);
+	game16.placePiece(0,0);//top row x
+	game16.placePiece(0,2);//''' o
+	game16.placePiece(0,1);//''' x
+	game16.placePiece(1,0);// o
+	game16.placePiece(1,1); //x
+	game16.placePiece(2,0);//o
+	game16.placePiece(1,2);// x
+	game16.placePiece(2,1); //o
 	game16.placePiece(2,2);
 	ASSERT_EQ(game16.getWinner(), Blank);
 }
@@ -110,9 +110,9 @@ TEST(TicTacToeBoardTest, catsGame){
 TEST(TicTacToeBoardTest, topwinX){
 	TicTacToeBoard game17;
 	game17.placePiece(0,0);
-	game17.placePiece(1,0);
+	game17.placePiece(2,2);
 	game17.placePiece(0,1);
-	game17.placePiece(2,0);
+	game17.placePiece(2,2);
 	game17.placePiece(0,2);
 
 	ASSERT_EQ(game17.getWinner(), X);
@@ -121,9 +121,9 @@ TEST(TicTacToeBoardTest, topwinX){
 TEST(TicTacToeBoardTest, middlewinX){
 	TicTacToeBoard game18;
 	game18.placePiece(1,0);
-	game18.placePiece(0,2);
+	game18.placePiece(2,2);
 	game18.placePiece(1,1);
-	game18.placePiece(2,0);
+	game18.placePiece(2,2);
 	game18.placePiece(1,2);
 	ASSERT_EQ(game18.getWinner(), X);
 }
@@ -141,7 +141,7 @@ TEST(TicTacToeBoardTest, botWIn){
 TEST(TicTacToeBoardTest, leftVert){
 	TicTacToeBoard game20;
 	game20.placePiece(0,0);
-	game20.placePiece(1,1);
+	game20.placePiece(2,2);
 	game20.placePiece(1,0);
 	game20.placePiece(2,2);
 	game20.placePiece(2,0);
