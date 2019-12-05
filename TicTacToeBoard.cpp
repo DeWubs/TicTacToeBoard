@@ -102,12 +102,12 @@ Piece TicTacToeBoard::getWinner()
       return board[0][0];
   }
   //check middle vertical
-  else if(board[0][1] == board[1][1] && board[1][1] == board[2][2]){
+  else if(board[0][1] == board[1][1] && board[1][1] == board[2][1]){
     if(board[0][1] != Blank)
       return board[0][1];
   }
   //check right vertical
-  else if(board[0][2] == board[1][1] && board[1][1] == board[2][2]){
+  else if(board[0][2] == board[1][2] && board[1][2] == board[2][2]){
     if(board[0][2] != Blank)
       return board[0][2];
   }
