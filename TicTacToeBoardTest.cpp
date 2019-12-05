@@ -99,9 +99,9 @@ TEST(TicTacToeBoardTest, catsGame){
 	game16.placePiece(0,2);//''' o
 	game16.placePiece(0,1);//''' x
 	game16.placePiece(1,0);// o
-	game16.placePiece(1,1); //x
-	game16.placePiece(2,0);//o
-	game16.placePiece(1,2);// x
+	game16.placePiece(1,2); //x
+	game16.placePiece(1,1);//o
+	game16.placePiece(2,0);// x
 	game16.placePiece(2,1); //o
 	game16.placePiece(2,2);
 	ASSERT_EQ(game16.getWinner(), Blank);
