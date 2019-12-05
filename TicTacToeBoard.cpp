@@ -128,8 +128,6 @@ Piece TicTacToeBoard::getWinner()
           return Invalid;
       }
     }
-    return Blank;
   }
-
-
+  return Blank;
 }
