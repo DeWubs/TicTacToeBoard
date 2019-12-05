@@ -112,7 +112,7 @@ TEST(TicTacToeBoardTest, topwinX){
 	game17.placePiece(0,0);
 	game17.placePiece(2,2);
 	game17.placePiece(0,1);
-	game17.placePiece(2,2);
+	game17.placePiece(2,1);
 	game17.placePiece(0,2);
 
 	ASSERT_EQ(game17.getWinner(), X);
@@ -123,7 +123,7 @@ TEST(TicTacToeBoardTest, middlewinX){
 	game18.placePiece(1,0);
 	game18.placePiece(2,2);
 	game18.placePiece(1,1);
-	game18.placePiece(2,2);
+	game18.placePiece(2,1);
 	game18.placePiece(1,2);
 	ASSERT_EQ(game18.getWinner(), X);
 }
@@ -133,7 +133,7 @@ TEST(TicTacToeBoardTest, botWIn){
 	game19.placePiece(2,0);
 	game19.placePiece(0,0);
 	game19.placePiece(2,1);
-	game19.placePiece(0,0);
+	game19.placePiece(0,1);
 	game19.placePiece(2,2);
 	ASSERT_EQ(game19.getWinner(), X);
 }
@@ -143,7 +143,7 @@ TEST(TicTacToeBoardTest, leftVert){
 	game20.placePiece(0,0);
 	game20.placePiece(2,2);
 	game20.placePiece(1,0);
-	game20.placePiece(2,2);
+	game20.placePiece(2,1);
 	game20.placePiece(2,0);
 	ASSERT_EQ(game20.getWinner(), X);
 }
@@ -153,7 +153,7 @@ TEST(TicTacToeBoardTest, midVert){
 	game21.placePiece(0,1);
 	game21.placePiece(0,0);
 	game21.placePiece(1,1);
-	game21.placePiece(0,0);
+	game21.placePiece(1,0);
 	game21.placePiece(2,1);
 	ASSERT_EQ(game21.getWinner(), X);
 }
@@ -163,7 +163,7 @@ TEST(TicTacToeBoardTest, rightVert){
 	game22.placePiece(0,2);
 	game22.placePiece(0,0);
 	game22.placePiece(1,2);
-	game22.placePiece(0,0);
+	game22.placePiece(1,0);
 	game22.placePiece(2,2);
 	ASSERT_EQ(game22.getWinner(), X);
 }
@@ -173,7 +173,7 @@ TEST(TicTacToeBoardTest, topLeftDiag){
 	game23.placePiece(0,0);
 	game23.placePiece(0,1);
 	game23.placePiece(1,1);
-	game23.placePiece(0,1);
+	game23.placePiece(2,1);
 	game23.placePiece(2,2);
 	ASSERT_EQ(game23.getWinner(), X);
 }
@@ -183,7 +183,7 @@ TEST(TicTacToeBoardTest, topRightDiag){
 	game24.placePiece(0,2);
 	game24.placePiece(0,1);
 	game24.placePiece(1,1);
-	game24.placePiece(0,1);
+	game24.placePiece(2,1);
 	game24.placePiece(2,0);
 	ASSERT_EQ(game24.getWinner(), X);
 }
